@@ -737,5 +737,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isHovering: 0
   hoverHeight: 2
+  waitTime: 4
   shadow: {fileID: 1437488981}
-  move: 0
+  moveSet: 000000000100000002000000

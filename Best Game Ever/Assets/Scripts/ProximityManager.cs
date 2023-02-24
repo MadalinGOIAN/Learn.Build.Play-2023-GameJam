@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Wizard;
 
 public class ProximityManager : MonoBehaviour
 {
@@ -18,9 +20,20 @@ public class ProximityManager : MonoBehaviour
         if (!fightHasStarted)
         {
             Debug.Log("The fight has been triggered");
-
             fightHasStarted = true;
-            ActivateHoveringMechanic();
+            StartFight();
+        }
+    }
+
+    private void StartFight()
+    {
+        ActivateHoveringMechanic();
+
+        // TODO: Trb schimbata conditia a.i. lupta sa se termine daca bossu sau playeru ramane fara viata
+        for (int i = 0; i < 10; i++)
+        {
+            _ = new WaitForSeconds(2f);
+            ChooseRandomMove();
         }
     }
 
@@ -30,5 +43,29 @@ public class ProximityManager : MonoBehaviour
         wizard.shadow.SetActive(true);
         wizard.shadow.transform.position = new Vector3(transform.position.x, -0.5f, transform.position.z);
         wizard.isHovering = true;
+    }
+
+    private void ChooseRandomMove()
+    {
+        int randomMoveIndex = UnityEngine.Random.Range(0, wizard.moveSet.Length);
+        MoveSet chosenMove = wizard.moveSet[randomMoveIndex];
+
+        switch (chosenMove)
+        {
+            case MoveSet.GetOnGroundLevel:
+                StartCoroutine(wizard.GetOnGroundLevel());
+                break;
+
+            case MoveSet.Tornadoes:
+                StartCoroutine(wizard.Tornadoes());
+                break;
+
+            case MoveSet.IceBreath:
+                StartCoroutine(wizard.IceBreath());
+                break;
+
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
     }
 }
