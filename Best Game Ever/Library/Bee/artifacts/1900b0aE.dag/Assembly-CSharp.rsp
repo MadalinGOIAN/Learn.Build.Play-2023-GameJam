@@ -370,6 +370,7 @@
 "Assets/Scripts/CameraMovement.cs"
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/ProximityManager.cs"
+"Assets/Scripts/Wizard.cs"
 -langversion:9.0
 
 /deterministic
