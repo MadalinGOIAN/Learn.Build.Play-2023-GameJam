@@ -584,6 +584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1619351108}
   - component: {fileID: 1619351107}
+  - component: {fileID: 1619351111}
   - component: {fileID: 1619351106}
   - component: {fileID: 1619351105}
   - component: {fileID: 1619351109}
@@ -740,3 +741,23 @@ MonoBehaviour:
   waitTime: 4
   shadow: {fileID: 1437488981}
   moveSet: 000000000100000002000000
+--- !u!95 &1619351111
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619351104}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a902420c98049ac4da4408d020a22612, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
