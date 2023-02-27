@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\ProximityManager.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Wizard_ReadyForFight.cs" />
+    <Compile Include="Assets\Scripts\Wizard_Idle.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

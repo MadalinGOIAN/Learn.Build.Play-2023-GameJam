@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Wizard_ReadyForFight : StateMachineBehaviour
@@ -11,6 +10,7 @@ public class Wizard_ReadyForFight : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         wizard = animator.GetComponent<Wizard>();
+        wizard.leftIdleState = true;
         ActivateHoveringMechanic();
     }
 
@@ -23,14 +23,13 @@ public class Wizard_ReadyForFight : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
+ 
     }
 
     private void ActivateHoveringMechanic()
     {
         wizard.transform.Translate(Vector2.up * wizard.hoverHeight);
         wizard.shadow.SetActive(true);
-        wizard.shadow.transform.position = new Vector3(wizard.transform.position.x, -0.5f, wizard.transform.position.z);
         wizard.isHovering = true;
     }
 }

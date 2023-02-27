@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Boss
   - Proximity Trigger
+  - Wizard
   layers:
   - Default
   - TransparentFX

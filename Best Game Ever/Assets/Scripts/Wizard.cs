@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class Wizard : MonoBehaviour
 {
-    public enum MoveSet
-    {
-        GetOnGroundLevel,
-        Tornadoes,
-        IceBreath
-    }
-
     public bool isHovering;
+    public bool leftIdleState = false;
     public float hoverHeight;
     public float waitTime;
     public GameObject shadow;
-    public MoveSet[] moveSet = { MoveSet.GetOnGroundLevel, MoveSet.Tornadoes, MoveSet.IceBreath };
 
     public IEnumerator GetOnGroundLevel()
     {
