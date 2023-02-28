@@ -10,8 +10,7 @@ public class Wizard_GetOnGroundLvl : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         wizard = animator.GetComponent<Wizard>();
-        wizard.StartCoroutine(GetOnGroundLvl());
-        animator.SetInteger("randomAttack_i", Random.Range(0, 3));
+        wizard.StartCoroutine(GetOnGroundLvl(animator));
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -26,13 +25,17 @@ public class Wizard_GetOnGroundLvl : StateMachineBehaviour
         wizard.isHovering = true;
     }
 
-    private IEnumerator GetOnGroundLvl()
+    private IEnumerator GetOnGroundLvl(Animator animator)
     {
         Debug.Log("Puteti ataca!");
+
         wizard.isHovering = false;
         wizard.transform.Translate(Vector2.down * wizard.hoverHeight);
         wizard.shadow.SetActive(false);
-        yield return new WaitForSeconds(3f);
+
+        yield return new WaitForSeconds(5f);
+
+        animator.SetInteger("randomAttack_i", 4);
         Debug.Log("Nu mai puteti ataca!");
     }
 }

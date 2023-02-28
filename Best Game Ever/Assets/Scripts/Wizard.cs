@@ -9,6 +9,7 @@ public class Wizard : MonoBehaviour
     public float hoverHeight;
     public float waitTime;
     public GameObject shadow;
+    public GameObject tornado;
 
     public IEnumerator GetOnGroundLevel()
     {

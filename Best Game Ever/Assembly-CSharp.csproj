@@ -59,9 +59,10 @@
     <Compile Include="Assets\Scripts\Wizard_GetOnGroundLvl.cs" />
     <Compile Include="Assets\Scripts\Wizard_ReadyForBattle.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Wizard_Tornadoes.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ProximityManager.cs" />
-    <Compile Include="Assets\Scripts\Wizard_IceBreath.cs" />
+    <Compile Include="Assets\Scripts\Tornado.cs" />
     <Compile Include="Assets\Scripts\Wizard.cs" />
   </ItemGroup>
   <ItemGroup>

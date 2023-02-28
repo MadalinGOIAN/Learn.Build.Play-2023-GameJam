@@ -43,6 +43,6 @@ public class Wizard_ReadyForBattle : StateMachineBehaviour
         Debug.Log("Dupa " + wizard.waitTime + "sec vom alege un atac random");
         yield return new WaitForSeconds(wizard.waitTime);
         Debug.Log("Timpul a trecut");
-        animator.SetInteger("randomAttack_i", /*Random.Range(0, 3)*/2);
+        animator.SetInteger("randomAttack_i", Random.Range(0, 2));
     }
 }
