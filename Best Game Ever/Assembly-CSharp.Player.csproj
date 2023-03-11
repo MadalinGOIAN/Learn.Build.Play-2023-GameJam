@@ -56,8 +56,17 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Wizard_GetOnGroundLvl.cs" />
+    <Compile Include="Assets\Scripts\Wizard_ReadyForBattle.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Wizard_Tornadoes.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\ProximityManager.cs" />
+    <Compile Include="Assets\Scripts\Tornado.cs" />
+    <Compile Include="Assets\Scripts\Wizard.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Assets\Low_Poly_Pixel_2D_Blocks_DevilsWorkShop_v04\License.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
