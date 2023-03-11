@@ -66,7 +66,7 @@
     <Compile Include="Assets\Scripts\Wizard.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Assets_DevilsWorkShop\Low_Poly_Pixel_2D_Blocks_DevilsWorkShop_v04\License.txt" />
+    <None Include="Assets\Assets\Low_Poly_Pixel_2D_Blocks_DevilsWorkShop_v04\License.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
